@@ -1,0 +1,33 @@
+{
+  "name": "minimalistic-node-js",
+  "description": "A minimalistic Node.JS environment for modern JS syntax with ESLInt and Jest",
+  "author": "Alexey Rodimov <d4rkru13r@gmail.com>",
+  "keywords": [
+    "jest",
+    "js",
+    "node",
+    "babel",
+    "eslint",
+    "es2015"
+  ],
+  "version": "0.0.1",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec 'npm run lint && jest && babel-node' src/main.js",
+    "test": "jest --watchAll",
+    "lint": "eslint \"**/*.js\" --ignore-pattern .gitignore --color"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": ">=12.16.3"
+  }
+}
