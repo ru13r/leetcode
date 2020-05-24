@@ -14,8 +14,9 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec 'npm run lint && jest && babel-node' src/main.js",
-    "test": "jest --watchAll",
+    "watch": "nodemon -q --exec 'npm run lint && jest && babel-node' src/main.js",
+    "start": "babel-node src/main.js",
+    "test": "jest --passWithNoTests",
     "lint": "eslint \"**/*.js\" --ignore-pattern .gitignore --color"
   },
   "devDependencies": {

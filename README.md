@@ -42,11 +42,15 @@ npm install
 
 The `src/main.js` is an entry point. The following commands are available.
 
-* Lint, test and execute the code (with watch mode)
+* Lint, test and execute the code (with watch mode enabled)
+```
+npm run watch
+```
+* Run app once
 ```
 npm run start
 ```
-* Run tests (with watch mode)
+* Run tests
 ```
 npm run test
 ```

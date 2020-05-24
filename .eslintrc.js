@@ -3,7 +3,8 @@ module.exports = {
 	globals: {},
 	env: {
 		node: true,
-		jest: true
+		jest: true,
+		es2017: true
 	},
 	parser: 'babel-eslint',
 	parserOptions: {

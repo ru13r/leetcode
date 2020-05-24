@@ -8,3 +8,4 @@ describe('Sum function', () => {
 		expect(sum(2, '3 monkeys')).toEqual(NaN);
 	});
 });
+
