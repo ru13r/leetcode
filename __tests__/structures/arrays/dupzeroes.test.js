@@ -28,7 +28,7 @@ const testCase = (test, f) => {
   });
 };
 
-describe('It shall duplicate zeroes',
+describe('duplicate zeroes',
   () => cases.forEach(test => testCase(test, f)));
 
 
