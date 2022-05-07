@@ -3,24 +3,19 @@
  * @return {number}
  */
 const removeDuplicates = function(nums) {
-  let ubound = nums.length;
-  let i = 0;
-  let j = 1;
-  let k = 0;
-  while (i < ubound && j <= ubound) {
-    if (nums[i] === nums[j]) {
+  // Define a counter to reassign nums
+  let j = 0;
+  // Iterate through input array
+  for (let i = 0; i < nums.length ; i++) {
+    // Check if curr elem is same as next elem
+    if (nums[i] !== nums[i + 1]) {
+      // reassign nums and increment counter
+      nums[j] = nums[i];
       j++;
-      continue;
     }
-    if ( j - i > 1) {
-      k = j - i - 1;
-      for (let l = i + 1; l < ubound; l++) {
-        nums[l] = (l + k < ubound) ? nums[l+k] : null;
-      }
-      ubound = ubound - k;
-    }
-    i++;
-    j = i + 1;
+
   }
-  return ubound;
+  //Slice nums from index 0 to counter and return nums length
+  nums.splice(j, nums.length - j);
+  return j;
 };
